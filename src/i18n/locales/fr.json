@@ -2325,15 +2325,9 @@
   "feedback": {
     "title": "Envoyer un retour",
     "subtitle": "Dites-nous quoi corriger ou construire",
-    "categoryLabel": "Type",
-    "category": {
-      "bug": "Bug",
-      "idea": "Idée",
-      "other": "Autre"
-    },
     "messageLabel": "Message",
     "messagePlaceholder": "Que s'est-il passé, ou qu'est-ce qui rendrait Tabularis meilleur ?",
-    "privacyNote": "Seuls votre message, la catégorie choisie et la version de l'application quittent l'application. Aucun détail de connexion, nom de base de données, requête ou identifiant n'est envoyé.",
+    "privacyNote": "Seuls votre message et la version de l'application quittent l'application. Aucun détail de connexion, nom de base de données, requête ou identifiant n'est envoyé.",
     "shortcutHint": "{{shortcut}} pour envoyer",
     "error": "Impossible d'envoyer le retour. Vérifiez votre connexion internet et réessayez.",
     "send": "Envoyer",
