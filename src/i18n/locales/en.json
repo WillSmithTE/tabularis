@@ -2336,15 +2336,9 @@
   "feedback": {
     "title": "Send Feedback",
     "subtitle": "Tell us what to fix or build next",
-    "categoryLabel": "Type",
-    "category": {
-      "bug": "Bug",
-      "idea": "Idea",
-      "other": "Other"
-    },
     "messageLabel": "Message",
     "messagePlaceholder": "What happened, or what would make Tabularis better?",
-    "privacyNote": "Only your message, the category you pick, and the app version leave the app. No connection details, database names, queries, or identifiers are sent.",
+    "privacyNote": "Only your message and the app version leave the app. No connection details, database names, queries, or identifiers are sent.",
     "shortcutHint": "{{shortcut}} to send",
     "error": "Could not send feedback. Check your internet connection and try again.",
     "send": "Send",

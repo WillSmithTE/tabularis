@@ -2247,15 +2247,9 @@
   "feedback": {
     "title": "Feedback senden",
     "subtitle": "Sag uns, was wir verbessern oder bauen sollen",
-    "categoryLabel": "Typ",
-    "category": {
-      "bug": "Fehler",
-      "idea": "Idee",
-      "other": "Sonstiges"
-    },
     "messageLabel": "Nachricht",
     "messagePlaceholder": "Was ist passiert, oder was würde Tabularis besser machen?",
-    "privacyNote": "Nur deine Nachricht, die gewählte Kategorie und die App-Version verlassen die App. Keine Verbindungsdaten, Datenbanknamen, Abfragen oder Kennungen werden gesendet.",
+    "privacyNote": "Nur deine Nachricht und die App-Version verlassen die App. Keine Verbindungsdaten, Datenbanknamen, Abfragen oder Kennungen werden gesendet.",
     "shortcutHint": "{{shortcut}} zum Senden",
     "error": "Feedback konnte nicht gesendet werden. Prüfe deine Internetverbindung und versuche es erneut.",
     "send": "Senden",

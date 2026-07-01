@@ -3,12 +3,7 @@ import { useTranslation } from "react-i18next";
 import { X, MessageSquarePlus, Loader2, Check, ShieldCheck } from "lucide-react";
 import { Modal } from "../ui/Modal";
 import { useKeybindings } from "../../hooks/useKeybindings";
-import {
-  FEEDBACK_CATEGORIES,
-  buildFeedbackPayload,
-  submitFeedback,
-  type FeedbackCategory,
-} from "../../utils/feedback";
+import { buildFeedbackPayload, submitFeedback } from "../../utils/feedback";
 
 interface FeedbackModalProps {
   isOpen: boolean;
@@ -21,7 +16,6 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
   const { t } = useTranslation();
   const { isMac } = useKeybindings();
   const [message, setMessage] = useState("");
-  const [category, setCategory] = useState<FeedbackCategory>("idea");
   const [status, setStatus] = useState<SubmitStatus>("idle");
 
   const canSubmit = message.trim().length > 0 && status !== "sending";
@@ -29,7 +23,6 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
   const handleClose = () => {
     if (status === "sent") {
       setMessage("");
-      setCategory("idea");
     }
     if (status !== "sending") {
       setStatus("idle");
@@ -42,7 +35,7 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
     if (!canSubmit) return;
     setStatus("sending");
     try {
-      await submitFeedback(buildFeedbackPayload(message, category));
+      await submitFeedback(buildFeedbackPayload(message));
       setStatus("sent");
     } catch {
       setStatus("error");
@@ -100,28 +93,6 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
           <form onSubmit={handleSubmit} className="flex flex-col overflow-hidden">
             {/* Content */}
             <div className="p-6 space-y-4 overflow-y-auto">
-              <div>
-                <label className="text-xs uppercase font-bold text-muted mb-1 block">
-                  {t("feedback.categoryLabel")}
-                </label>
-                <div className="flex gap-2">
-                  {FEEDBACK_CATEGORIES.map((option) => (
-                    <button
-                      key={option}
-                      type="button"
-                      onClick={() => setCategory(option)}
-                      className={`px-3 py-1.5 rounded-lg border text-sm transition-colors ${
-                        category === option
-                          ? "border-blue-500 bg-blue-900/20 text-blue-400"
-                          : "border-default bg-base text-secondary hover:text-primary hover:border-strong"
-                      }`}
-                    >
-                      {t(`feedback.category.${option}`)}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               <div>
                 <label htmlFor="feedback-message" className="text-xs uppercase font-bold text-muted mb-1 block">
                   {t("feedback.messageLabel")}
