@@ -8,6 +8,7 @@ import { useGlobalShortcuts } from "../../hooks/useGlobalShortcuts";
 import { resolveRenderedSplitLayout } from "../../utils/connectionLayout";
 import { ROOT_COMMAND_SCOPE_ID } from "../../utils/commandScopeStore";
 import { CommandPaletteModal } from "../modals/CommandPaletteModal";
+import { UseroFeedback } from "../UseroFeedback";
 import { CommandPaletteScopeBridge } from "./CommandPaletteScopeBridge";
 import { ProductionBanner } from "./ProductionBanner";
 import { RightSidebar } from "./RightSidebar";
@@ -47,6 +48,7 @@ const MainLayoutContent = () => {
       </main>
       <RightSidebar />
       <CommandPaletteModal />
+      <UseroFeedback />
     </div>
   );
 };
