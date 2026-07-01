@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Plug2, Settings, Cpu, PanelLeft, Layers, Star, Clock, BookOpen } from "lucide-react";
+import { Plug2, Settings, Cpu, PanelLeft, Layers, Star, Clock, BookOpen, MessageSquarePlus } from "lucide-react";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { openUrl } from "@tauri-apps/plugin-opener";
 import { DISCORD_URL } from "../../config/links";
@@ -17,6 +17,7 @@ import { ConnectionGroupItem } from "./sidebar/ConnectionGroupItem";
 import { ExplorerSidebar, type SidebarTab } from "./ExplorerSidebar";
 import { PanelDatabaseProvider } from "./PanelDatabaseProvider";
 import { DiscordCommunityCallout } from "./sidebar/DiscordCommunityCallout";
+import { FeedbackModal } from "../modals/FeedbackModal";
 
 // Hooks & Utils
 import { useSidebarResize } from "../../hooks/useSidebarResize";
@@ -42,6 +43,7 @@ export const Sidebar = () => {
   const [isExplorerCollapsed, setIsExplorerCollapsed] = useState(false);
   const [sidebarTab, setSidebarTab] = useState<SidebarTab>("structure");
   const [showShortcutHints, setShowShortcutHints] = useState(false);
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const { isMac } = useKeybindings();
 
   useEffect(() => {
@@ -315,6 +317,16 @@ export const Sidebar = () => {
             <DiscordCommunityCallout />
           </div>
 
+          <button
+            onClick={() => setIsFeedbackOpen(true)}
+            className="flex items-center justify-center w-12 h-12 rounded-lg transition-colors relative group mb-2 text-muted hover:bg-surface-secondary hover:text-primary"
+          >
+            <MessageSquarePlus size={24} />
+            <span className="absolute left-14 bg-surface-secondary text-primary text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-30 pointer-events-none">
+              {t("feedback.title")}
+            </span>
+          </button>
+
           <NavItem
             to="/mcp"
             icon={Cpu}
@@ -389,6 +401,10 @@ export const Sidebar = () => {
           ))}
         </div>
       )}
+      <FeedbackModal
+        isOpen={isFeedbackOpen}
+        onClose={() => setIsFeedbackOpen(false)}
+      />
     </div>
   );
 };

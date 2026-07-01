@@ -2183,5 +2183,24 @@
     },
     "title": "连接测试日志",
     "showLog": "显示日志"
+  },
+  "feedback": {
+    "title": "发送反馈",
+    "subtitle": "告诉我们该修复什么或构建什么",
+    "categoryLabel": "类型",
+    "category": {
+      "bug": "缺陷",
+      "idea": "想法",
+      "other": "其他"
+    },
+    "messageLabel": "留言",
+    "messagePlaceholder": "发生了什么?或者怎样能让 Tabularis 更好?",
+    "privacyNote": "离开应用的只有你的留言、所选类别和应用版本。不会发送任何连接信息、数据库名称、查询或标识符。",
+    "shortcutHint": "{{shortcut}} 发送",
+    "error": "无法发送反馈。请检查网络连接后重试。",
+    "send": "发送",
+    "sentTitle": "反馈已发送",
+    "sentDesc": "感谢你帮助改进 Tabularis。你的留言会直接送达团队。",
+    "done": "完成"
   }
 }
