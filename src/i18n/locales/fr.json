@@ -2321,5 +2321,18 @@
     },
     "title": "Journal du test de connexion",
     "showLog": "Afficher le journal"
+  },
+  "feedback": {
+    "title": "Envoyer un retour",
+    "subtitle": "Dites-nous quoi corriger ou construire",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Que s'est-il passé, ou qu'est-ce qui rendrait Tabularis meilleur ?",
+    "privacyNote": "Seuls votre message et la version de l'application quittent l'application. Aucun détail de connexion, nom de base de données, requête ou identifiant n'est envoyé.",
+    "shortcutHint": "{{shortcut}} pour envoyer",
+    "error": "Impossible d'envoyer le retour. Vérifiez votre connexion internet et réessayez.",
+    "send": "Envoyer",
+    "sentTitle": "Retour envoyé",
+    "sentDesc": "Merci d'aider à améliorer Tabularis. Votre message arrive directement à l'équipe.",
+    "done": "Terminé"
   }
 }

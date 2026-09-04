@@ -2332,5 +2332,18 @@
     },
     "title": "Connection test log",
     "showLog": "Show log"
+  },
+  "feedback": {
+    "title": "Send Feedback",
+    "subtitle": "Tell us what to fix or build next",
+    "messageLabel": "Message",
+    "messagePlaceholder": "What happened, or what would make Tabularis better?",
+    "privacyNote": "Only your message and the app version leave the app. No connection details, database names, queries, or identifiers are sent.",
+    "shortcutHint": "{{shortcut}} to send",
+    "error": "Could not send feedback. Check your internet connection and try again.",
+    "send": "Send",
+    "sentTitle": "Feedback sent",
+    "sentDesc": "Thanks for helping improve Tabularis. Your note goes straight to the team.",
+    "done": "Done"
   }
 }

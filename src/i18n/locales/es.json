@@ -2165,5 +2165,18 @@
     },
     "title": "Registro de la prueba de conexión",
     "showLog": "Mostrar registro"
+  },
+  "feedback": {
+    "title": "Enviar comentarios",
+    "subtitle": "Dinos qué arreglar o qué construir",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "¿Qué pasó, o qué haría mejor a Tabularis?",
+    "privacyNote": "Solo tu mensaje y la versión de la app salen de la aplicación. No se envían datos de conexión, nombres de bases de datos, consultas ni identificadores.",
+    "shortcutHint": "{{shortcut}} para enviar",
+    "error": "No se pudieron enviar los comentarios. Comprueba tu conexión a internet e inténtalo de nuevo.",
+    "send": "Enviar",
+    "sentTitle": "Comentarios enviados",
+    "sentDesc": "Gracias por ayudar a mejorar Tabularis. Tu mensaje va directo al equipo.",
+    "done": "Listo"
   }
 }

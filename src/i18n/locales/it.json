@@ -2245,5 +2245,18 @@
     },
     "title": "Log del test di connessione",
     "showLog": "Mostra log"
+  },
+  "feedback": {
+    "title": "Invia feedback",
+    "subtitle": "Dicci cosa correggere o cosa costruire",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Cosa è successo, o cosa renderebbe Tabularis migliore?",
+    "privacyNote": "Solo il tuo messaggio e la versione dell'app lasciano l'applicazione. Nessun dettaglio di connessione, nome di database, query o identificatore viene inviato.",
+    "shortcutHint": "{{shortcut}} per inviare",
+    "error": "Impossibile inviare il feedback. Controlla la connessione internet e riprova.",
+    "send": "Invia",
+    "sentTitle": "Feedback inviato",
+    "sentDesc": "Grazie per aiutarci a migliorare Tabularis. Il tuo messaggio arriva direttamente al team.",
+    "done": "Fatto"
   }
 }
